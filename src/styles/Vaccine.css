@@ -1,0 +1,59 @@
+.vaccine__card {
+  display: flex !important;
+  justify-content: space-around !important;
+  margin-right: 50px !important;
+  margin-top: 30px !important;
+  margin-left: 50px !important;
+}
+
+.card__content{
+  border: 0.2px solid #DDDDDD;
+  border-top: 5px solid #FF4136;
+}
+
+.card__phase__name{
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+.vaccineInfo__table{
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: auto !important;
+  box-shadow: 0px 0px 36px 15px rgba(0, 0, 0, 0.28) !important;
+}
+
+.vaccineInfo__table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.vaccineInfo__table th{
+  background-color: #0074D9;
+  color: white;
+  font-weight: bold;
+  font: "Fira Sans", serif;
+}
+
+.card_phase_no{
+  color: #FF851B;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.card__details{
+  font-size: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+@media(max-width: 1160px){
+  .vaccine__card{
+    flex-wrap: wrap !important;
+  }
+}

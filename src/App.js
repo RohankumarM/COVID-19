@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Tracker from './Tracker';
+import Vaccine from './Vaccine';
+import Home from './Home';
+import Nav from './Nav';
+import News from './News';
+import coronavirusImage from './images/image.png';
+import './styles/App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+      <img className="header__img" src={coronavirusImage} alt="COVID-19" />
+        <Nav />
+        <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/news" component={News} />
+        <Route path="/tracker" component={Tracker} />
+        <Route path="/vaccine" component={Vaccine} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
