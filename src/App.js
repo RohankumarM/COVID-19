@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Tracker from './Tracker';
-import Vaccine from './Vaccine';
-import Home from './Home';
+import Tracker from './Components/Tracker';
+import Vaccine from './Components/Vaccine';
+import Home from './Components/Home';
 import Nav from './Nav';
 import News from './News';
 import coronavirusImage from './images/image.png';

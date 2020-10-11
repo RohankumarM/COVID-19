@@ -16,9 +16,9 @@ const NewsCards = ({ articles, activeArticles }) => {
     return (
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={3}>
-          {infoCards.map((infoCard) => {
+          {infoCards.map((infoCard, index) => {
             return (
-              <Grid item xs={12} sm={6} md={4} ls={3} className={classes.infoCard}>
+              <Grid key={index} item xs={12} sm={6} md={4} ls={3} className={classes.infoCard}>
                 <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
                   <Typography variant="h5">{infoCard.title}</Typography>
                   {infoCard.info ? <Typography variant="h6">

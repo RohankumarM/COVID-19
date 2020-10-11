@@ -1,6 +1,9 @@
 *{
   margin: 0;
 }
+.app{
+  background-color: #F5F5F5;
+}
 
 .header__img{
   display: block;
@@ -8,6 +11,7 @@
   margin-right: auto;
   margin-bottom: 20px;
   margin-top: 10px;
+  max-width: 50%;
 }
 
 @media(max-width: 450px){

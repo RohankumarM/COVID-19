@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2';
 import numeral from 'numeral';
 
-function LineGraph({ casesType, ...props }) {
+function LineGraph({ country, casesType, ...props }) {
   const [data, setData] = useState({});
 
   const buildChartData = (data, casesType) => {
@@ -22,16 +22,26 @@ function LineGraph({ casesType, ...props }) {
   };
 
   useEffect(() => {
+    const url = country === 'worldwide' ? 'https://disease.sh/v3/covid-19/historical/all?lastdays=120'
+      : `https://disease.sh/v3/covid-19/historical/${country}?lastdays=120`;
+
     const fetchData = async () => {
-      await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
+      await fetch(url)
         .then((response => response.json()))
         .then(data => {
-          const chartData = buildChartData(data, casesType);
-          setData(chartData);
+          if (country === 'worldwide') {
+            const chartData = buildChartData(data, casesType);
+            setData(chartData);
+          }
+          else {
+            const chartData = buildChartData(data.timeline, casesType);
+            setData(chartData);
+          }
+
         })
     }
     fetchData();
-  }, [casesType]);
+  }, [casesType, country]);
 
   const options = {
     legend: {
@@ -39,7 +49,7 @@ function LineGraph({ casesType, ...props }) {
     },
     elements: {
       point: {
-        radius: 0,
+        radius: 1,
       },
     },
     maintainAspectRatio: false,

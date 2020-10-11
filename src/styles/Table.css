@@ -1,23 +1,48 @@
-.table{
+.details{
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   margin-top: 20px;
   overflow: scroll;
+  overflow-x: hidden;
   height: 400px;
-  color: gray;
+  color: #5a5a57;
   background-color: white;
-  max-width: 350px;
 }
 
-.table tr{
+thead{
+  position: sticky;
+  top: 0;
+}
+
+.table__head tr{
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+tbody tr{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table_body tr{
   display: flex;
   justify-content: space-between;
 }
 
-.table td{
+.table__body td{
   padding: 0.5em;
 }
 
-.table tr:nth-of-type(odd){
-  background-color: #f3f2f8;
+.details tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.details tbody tr:hover{
+  background-color: #ddd;
 }

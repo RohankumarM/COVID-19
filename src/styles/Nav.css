@@ -45,6 +45,7 @@ li {
 @media(max-width: 400px){
   .nav__links{
     flex-direction: column;
+    margin-right: 40px;
   }
 }  
 

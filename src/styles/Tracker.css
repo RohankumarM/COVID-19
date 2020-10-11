@@ -1,10 +1,12 @@
 body{
-  background-color: #f5f6fa;
+  background-color: #F5F5F5;
 }
 
 .tracker{
   display: flex;
   justify-content: space-evenly;
+  background-color: #F5F5F5;
+  padding: 20px;
 }
 
 .header__image{
@@ -25,6 +27,15 @@ body{
   margin-top: 20px !important;
 }
 
+.app__left__dropdown{
+  font-size: 14px !important;
+  padding-top: 10px !important;
+}
+.MuiSelect-root {
+  font-size: 14px !important;
+  padding-top: 25px !important;
+}
+
 .app__left{
   flex: 0.8;
 }
@@ -43,13 +54,24 @@ body{
   flex-direction: column !important;
 }
 
+.app__right__table__header{
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+  color: #333;
+  border: 2px solid #574b90;
+}
+
 .app__graphTitle{
   margin-top: 30px;
   margin-bottom: 15px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Heebo', sans-serif;
+  border: 2px solid #574b90;
 }
 
 .app__graph{
-  max-width: 350px !important;
+  display: flex;
 }
 
 .app__stats{

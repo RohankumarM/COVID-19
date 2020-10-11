@@ -2,10 +2,14 @@
   background-color: black;
 }
 .landing{
-  background: url("../images/coronavirus_bg_image.jpg");
   min-height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.landing > img{
+  display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .intro{
